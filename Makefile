@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lsadikaj <lsadikaj@student.42lausanne.c    +#+  +:+       +#+         #
+#    By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 14:48:22 by lsadikaj          #+#    #+#              #
-#    Updated: 2024/10/02 09:07:04 by lsadikaj         ###   ########.fr        #
+#    Updated: 2024/10/02 14:46:53 by lsadikaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
