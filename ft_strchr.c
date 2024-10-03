@@ -1,45 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 10:44:08 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/03 11:21:38 by lsadikaj         ###   ########.fr       */
+/*   Created: 2024/10/03 15:03:29 by lsadikaj          #+#    #+#             */
+/*   Updated: 2024/10/03 15:22:22 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-size_t ft_strlen(const char *s)
+char    *ft_strchr(const char *s, int c)
 {
-    size_t i;
-
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+    while (*s)
+    {
+        if (*s == (char)c)
+            return ((char *)s);
+        s++;
+    }
+    if (c == '\0')
+        return ((char *)s);
+    return (NULL);
 }
 
 #include <stdio.h>
 
-int main(int argc, char **argv)
+int main(void)
 {
-    int i;
-
-    if (argc < 2)
-    {
-        printf("Please write minimum a argument\n");
-        return (1);
-    }
-    i = 1;
-    while (i < argc)
-    {
-        size_t length = ft_strlen(argv[i]);
-        printf("The length of \"%s\" is : %zu\n", argv[i], length);
-        i++;
-    }
+    char c = 'A';
+    int i = 'A';
+    int eof = EOF; // EOF est typiquement -1
+    
+    printf("c = %d, i = %d, eof = %d\n", c, i, eof);
     return (0);
 }

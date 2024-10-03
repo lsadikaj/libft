@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 10:44:08 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/03 11:21:38 by lsadikaj         ###   ########.fr       */
+/*   Created: 2024/10/03 14:52:07 by lsadikaj          #+#    #+#             */
+/*   Updated: 2024/10/03 14:59:58 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-size_t ft_strlen(const char *s)
+int ft_tolower(int c)
 {
-    size_t i;
-
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+    if (c >= 'A' && c <= 'Z')
+        return (c + 32);
+    return (c);
 }
 
 #include <stdio.h>
 
-int main(int argc, char **argv)
+int main(void)
 {
-    int i;
+    char    test1 = 'Y';
+    char    test2 = 'a';
+    char    test3 = '!';
+    char    test4 = 'R';
+    
+    printf("%c -> %c\n", test1, ft_tolower(test1));
+    printf("%c -> %c\n", test2, ft_tolower(test2));
+    printf("%c -> %c\n", test3, ft_tolower(test3));
+    printf("%c -> %c\n", test4, ft_tolower(test4));
 
-    if (argc < 2)
-    {
-        printf("Please write minimum a argument\n");
-        return (1);
-    }
-    i = 1;
-    while (i < argc)
-    {
-        size_t length = ft_strlen(argv[i]);
-        printf("The length of \"%s\" is : %zu\n", argv[i], length);
-        i++;
-    }
     return (0);
 }

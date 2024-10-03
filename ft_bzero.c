@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/02 10:44:08 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/03 11:21:38 by lsadikaj         ###   ########.fr       */
+/*   Created: 2024/10/03 09:06:54 by lsadikaj          #+#    #+#             */
+/*   Updated: 2024/10/03 09:41:09 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-size_t ft_strlen(const char *s)
+void    bzero(void *s, size_t n)
 {
-    size_t i;
-
+    size_t  i;
+    unsigned char    *ptr;
+    
+    ptr = (unsigned char *)s;
     i = 0;
-    while (s[i])
+    while (i < n)
+    {
+        ptr[i] = 0;
         i++;
-    return (i);
+    }
 }
 
 #include <stdio.h>
 
-int main(int argc, char **argv)
+int main()
 {
-    int i;
+    char    str[50] = "Hello, world!";
+    printf("Before ft_bzero: %s\n", str);
 
-    if (argc < 2)
-    {
-        printf("Please write minimum a argument\n");
-        return (1);
-    }
-    i = 1;
-    while (i < argc)
-    {
-        size_t length = ft_strlen(argv[i]);
-        printf("The length of \"%s\" is : %zu\n", argv[i], length);
-        i++;
-    }
+    ft_bzero(str + 6, 5);
+    printf("After ft_bzero: %s\n", str);
+
     return (0);
 }
