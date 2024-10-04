@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:05:51 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/02 14:45:40 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/04 13:24:46 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;
-	
+
 	i = 1;
 	(void)argc;
 	while (argv[i])
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 		{
 			if (ft_isalpha(argv[i][j]))
 				printf("%c is alpha\n", argv[i][j]);
-			else 
+			else
 				printf("%c is not alpha\n", argv[i][j]);
 			j++;
 		}
