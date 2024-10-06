@@ -1,39 +1,46 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsadikaj <lsadikaj@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 15:03:29 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/04 18:00:33 by lsadikaj         ###   ########.fr       */
+/*   Created: 2024/10/06 13:34:42 by lsadikaj          #+#    #+#             */
+/*   Updated: 2024/10/06 22:02:48 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    while (*s)
+    unsigned int i;
+
+    if (!s || !f)
+        return;
+
+    i = 0;
+    while (s[i])
     {
-        if (*s == (char)c)
-            return ((char *)s);
-        s++;
+        f(i, &s[i]);
+        i++;
     }
-    if (c == '\0')
-        return ((char *)s);
-    return (NULL);
 }
-/*
+
 #include <stdio.h>
+#include <ctype.h>
+
+void to_upper(unsigned int index, char *c)
+{
+    (void)index;
+    *c = (char)toupper(*c);
+}
 
 int main(void)
 {
-    char c = 'A';
-    int i = 'A';
-    int eof = EOF; // EOF est typiquement -1
-    
-    printf("c = %d, i = %d, eof = %d\n", c, i, eof);
-    return (0);
+    char str[] = "hello world";
+    ft_striteri(str, to_upper);
+    printf("Modified string: '%s'\n", str); // Should print 'HELLO WORLD'
+
+    return 0;
 }
-*/
