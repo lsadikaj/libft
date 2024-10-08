@@ -6,19 +6,19 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:52:07 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/03 14:59:58 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 13:04:32 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        return (c + 32);
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -35,3 +35,4 @@ int main(void)
 
     return (0);
 }
+*/

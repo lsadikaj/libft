@@ -6,26 +6,24 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 10:36:36 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/04 12:32:53 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 15:40:01 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void    *ptr;
-    
-    ptr = malloc(count * size);
-    if (!ptr)
-        return (NULL);
-    
-    ft_bzero(ptr, count * size);
+	void	*ptr;
 
-    return (ptr);
+	ptr = malloc(count * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -59,3 +57,4 @@ int main(void)
 
     return 0;
 }
+*/

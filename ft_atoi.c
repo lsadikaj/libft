@@ -6,37 +6,37 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 10:12:23 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/04 12:31:19 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 14:00:09 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    int i;
-    int sign;
-    int result;
+	int	i;
+	int	sign;
+	int	result;
 
-    i = 0;
-    sign = 1;
-    result = 0;
-    while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-        i++;
-    while (str[i] == '+' || str[i] == '-')
-    {
-        if (str[i] == '-')
-            sign *= -1;
-        i++;
-    }
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        result = result * 10 + (str[i] - '0');
-        i++;
-    }
-    return (result * sign);
+	i = 0;
+	sign = 1;
+	result = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return (result * sign);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -53,3 +53,4 @@ int main(void)
 
     return 0;
 }
+*/

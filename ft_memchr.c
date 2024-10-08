@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsadikaj <lsadikaj@student.42lausanne.ch > +#+  +:+       +#+        */
+/*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 19:27:52 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/03 20:27:57 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 13:07:56 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    size_t  i;
-    unsigned char   *ptr;
+	size_t			i;
+	unsigned char	*ptr;
 
-    ptr = (unsigned char *)s;
-    i = 0;
-    while (i < n)
-    {
-        if (ptr[i] == (unsigned char)c)
-            return ((void *)(ptr + i));
-        i++;
-    }
-    return (NULL);
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (ptr[i] == (unsigned char)c)
+			return ((void *)(ptr + i));
+		i++;
+	}
+	return (NULL);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -45,3 +45,4 @@ int main()
 
     return (0);
 }
+*/
