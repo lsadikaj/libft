@@ -6,40 +6,40 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 11:03:24 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/04 11:21:31 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 11:12:32 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char    *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-    int i;
-    int len;
-    char    *copy;
+	int		i;
+	int		len;
+	char	*copy;
 
-    len = 0;
-    while (s1[len])
-    {
-        len++;
-    }
-    copy = (char *)malloc((len + 1) * sizeof(char));
-    if (!copy)
-        return (NULL);
-    i = 0;
-    while (s1[i])
-    {
-        copy[i] = s1[i];
-        i++;
-    }
-    copy[i] = '\0';
-    return (copy);
+	len = 0;
+	while (s1[len])
+	{
+		len++;
+	}
+	copy = (char *)malloc((len + 1) * sizeof(char));
+	if (!copy)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		copy[i] = s1[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
 }
-
+/*
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     const char *original = "Hello, world!";
     char *duplicate;
@@ -60,3 +60,4 @@ int main()
 
     return 0;
 }
+*/

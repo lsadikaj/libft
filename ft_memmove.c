@@ -6,39 +6,39 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:19:15 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/03 10:56:40 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 10:47:11 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char   *d;
-    const unsigned char *s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-    d = (unsigned char *)dst;
-    s = (unsigned char *)src;
-    if (d < s)
-    {
-        while (len--)
-        {
-            *d++ = *s++;
-        }
-    }
-    else
-    {
-        d += len;
-        s += len;
-        while (len--)
-        {
-            *(--d) = *(--s);
-        }
-    }
-    return dst;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (d < s)
+	{
+		while (len--)
+		{
+			*d++ = *s++;
+		}
+	}
+	else
+	{
+		d += len;
+		s += len;
+		while (len--)
+		{
+			*(--d) = *(--s);
+		}
+	}
+	return (dst);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -58,3 +58,4 @@ int main() {
 
     return 0;
 }
+*/

@@ -6,19 +6,19 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 10:32:43 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/02 14:45:32 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 10:13:28 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int main(int argc, char **argv)
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
     int i;
     int j;
 
-    i = 0;
+    i = 1;
     (void)argc;
     while (argv[i])
     {
@@ -44,3 +44,4 @@ int main(int argc, char **argv)
     }
     return (0);
 }
+*/

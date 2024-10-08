@@ -1,14 +1,14 @@
-#******************************************************************************#
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lsadikaj <lsadikaj@student.42lausanne.c    +#+  +:+       +#+         #
+#    By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 14:48:22 by lsadikaj          #+#    #+#              #
-#    Updated: 2024/10/07 09:52:51 by lsadikaj         ###   ########.fr        #
+#    Updated: 2024/10/08 09:39:51 by lsadikaj         ###   ########.fr        #
 #                                                                              #
-#******************************************************************************#
+# **************************************************************************** #
 
 NAME = libft.a
 
@@ -26,16 +26,18 @@ BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstmap.c
 
 OBJ = $(SRC:.c=.o)
-BONUS_OBJ = &(BONUS_SRC:.c=.o)
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 CC = gcc
-
 CFLAGS = -Wall -Wextra -Werror 
 
 all : $(NAME)
 
-$(NAME): $(OBJ) $(BONUS_OBJ)
-	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ) 
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
@@ -44,5 +46,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-bonus: $(NAME)

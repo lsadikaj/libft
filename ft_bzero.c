@@ -6,26 +6,26 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 09:06:54 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/04 13:24:48 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 10:36:07 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    size_t  i;
-    unsigned char    *ptr;
+	size_t			i;
+	unsigned char	*ptr;
 
-    ptr = (unsigned char *)s;
-    i = 0;
-    while (i < n)
-    {
-        ptr[i] = 0;
-        i++;
-    }
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -38,3 +38,4 @@ int main(void)
 
     return (0);
 }
+*/

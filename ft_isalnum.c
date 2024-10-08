@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:17:37 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/02 14:45:41 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 09:57:42 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int	main(int argc, char **argv)
@@ -43,3 +43,4 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+*/

@@ -6,23 +6,23 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 10:44:08 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/03 11:21:38 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 10:15:17 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
-
+/*
 #include <stdio.h>
 
 int main(int argc, char **argv)
@@ -43,3 +43,4 @@ int main(int argc, char **argv)
     }
     return (0);
 }
+*/

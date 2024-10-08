@@ -6,31 +6,31 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 14:44:00 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/02 14:45:07 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/08 10:23:21 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-void    *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned char *ptr;
-    size_t i;
+	unsigned char	*ptr;
+	size_t			i;
 
-    ptr = (unsigned char *)b;
-    i = 0;
-    while (i < len)
-    {
-        ptr[i] = (unsigned char)c;
-        i++;
-    }
-    return (b);
+	ptr = (unsigned char *)b;
+	i = 0;
+	while (i < len)
+	{
+		ptr[i] = (unsigned char)c;
+		i++;
+	}
+	return (b);
 }
-
+/*
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     char    str[50] = "Hello, world!";
     printf("Before ft_memset: %s\n", str);
@@ -40,3 +40,4 @@ int main()
 
     return (0);
 }
+*/
