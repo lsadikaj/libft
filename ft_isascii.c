@@ -6,17 +6,17 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 09:53:53 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/08 10:03:24 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:11:32 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
 /*
 #include <stdio.h>

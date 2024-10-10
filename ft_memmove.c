@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:19:15 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/08 10:47:11 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 14:53:39 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*d;
 	const unsigned char	*s;
 
+	if (!dst && !src)
+		return (NULL);
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
 	if (d < s)

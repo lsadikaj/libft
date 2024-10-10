@@ -6,20 +6,20 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:54:17 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/09 16:26:29 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:17:53 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stddef.h>
-#include <stdlib.h>
+# include <stddef.h>
+# include <stdlib.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
-	struct  s_list	*next;
+	struct s_list	*next;
 }t_list;
 
 int		ft_isalpha(int c);
@@ -41,7 +41,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-char	*ft_strnstr(const char  *haystack, const char *needle, size_t len);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);

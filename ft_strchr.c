@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 15:03:29 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/08 11:28:01 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 14:59:58 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
 	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == uc)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if (uc == '\0')
 		return ((char *)s);
 	return (NULL);
 }

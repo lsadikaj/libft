@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 20:28:20 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/09 15:38:45 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:51:09 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	get_num_len(long nb)
 
 	len = 0;
 	if (nb <= 0)
-		len = 1;
+		len++;
 	while (nb != 0)
 	{
 		len++;
@@ -34,13 +34,13 @@ char	*ft_itoa(int n)
 	int		len;
 
 	nb = n;
-	if (n < 0)
-		nb = -nb;
 	len = get_num_len(nb);
 	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
+	if (nb < 0)
+		nb = -nb;
 	while (len--)
 	{
 		str[len] = (nb % 10) + '0';
