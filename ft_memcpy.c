@@ -6,12 +6,11 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 09:45:34 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 14:52:09 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:32:21 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

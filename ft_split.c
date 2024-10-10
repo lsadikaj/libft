@@ -6,12 +6,11 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 09:32:25 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 14:46:55 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:31:09 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	count_words(const char *str, char c)
 {

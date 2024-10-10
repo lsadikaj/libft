@@ -6,12 +6,11 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:19:15 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 14:53:39 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:32:28 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

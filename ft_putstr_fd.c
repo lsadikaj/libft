@@ -6,12 +6,11 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 08:35:39 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 08:47:47 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:33:27 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {

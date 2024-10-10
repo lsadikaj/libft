@@ -6,12 +6,11 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:59:28 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/08 10:57:50 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:33:57 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

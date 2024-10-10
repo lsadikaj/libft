@@ -6,12 +6,11 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 14:44:00 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/08 10:23:21 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:32:33 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
