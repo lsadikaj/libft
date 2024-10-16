@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:45:16 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 15:31:59 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:40:56 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 #include <stdio.h>
 
 // Fonction de transformation pour ft_lstmap : ici, on double une valeur entière
-void	*double_value(void *content)
+static void	*double_value(void *content)
 {
 	int *new_value = malloc(sizeof(int));
 	if (!new_value)
@@ -45,7 +45,7 @@ void	*double_value(void *content)
 }
 
 // Fonction de suppression utilisée par ft_lstmap pour libérer la mémoire
-void	del(void *content)
+static void	del(void *content)
 {
 	free(content);
 }

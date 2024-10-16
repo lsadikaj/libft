@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:35:43 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 11:24:18 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:41:17 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
 
-void	print_content(void *content)
+static void	print_content(void *content)
 {
 	printf("%s\n", (char *)content); // Cast du contenu en char* et l'affiche
 }

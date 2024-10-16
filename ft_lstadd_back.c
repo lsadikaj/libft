@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:42:53 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 10:46:14 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:05:40 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
 
 int	main(void)
 {

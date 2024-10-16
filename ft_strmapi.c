@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 13:15:30 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/09 16:20:45 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:35:51 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 /*
 #include <stdio.h>
 
-char	to_upper(unsigned int index, char c)
+static char	to_upper(unsigned int index, char c)
 {
 	(void)index;
 	if (c >= 'a' && c <= 'z')

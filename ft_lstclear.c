@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:07:18 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 15:31:37 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/16 09:15:19 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
-void	del(void *content)
+/*
+static void	del(void *content)
 {
 	free(content);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)

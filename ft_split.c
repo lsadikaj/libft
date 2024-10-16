@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 09:32:25 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 15:31:09 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/16 12:12:52 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	s_split[j] = 0;
+	s_split[j] = NULL;
 	return (s_split);
 }
 /*
