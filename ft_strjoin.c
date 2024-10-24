@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 13:00:20 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/09 09:57:56 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:18:16 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result = (char *)malloc(len_s1 + len_s2 + 1);
 	if (!result)
 		return (NULL);
-	i = -1;
-	while (++i < len_s1)
+	i = 0;
+	while (i < len_s1)
+	{
 		result[i] = s1[i];
+		i++;
+	}
 	j = 0;
 	while (j < len_s2)
 		result[i++] = s2[j++];

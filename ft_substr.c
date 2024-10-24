@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 11:24:38 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/09 09:31:50 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/23 08:55:15 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
-	substr = (char *)malloc(len + 1);
+	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
 	i = 0;

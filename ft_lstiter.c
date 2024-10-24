@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:35:43 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/16 09:41:17 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/23 08:55:18 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (!lst || !f)
+		return ;
 	while (lst)
 	{
 		f(lst->content);

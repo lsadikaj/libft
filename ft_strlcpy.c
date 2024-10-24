@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:59:28 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/10 15:33:57 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:20:00 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (dstsize > 0)
 	{
 		j = 0;
-		while (j < dstsize - 1 && src[j] != '\0')
+		while (j < dstsize - 1 && src[j])
 		{
 			dst[j] = src[j];
 			j++;

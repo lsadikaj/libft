@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:45:16 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/16 09:40:56 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/23 08:59:51 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*new_elem;
 
+	if (!lst || !f || !del)
+		return (NULL);
 	new_list = NULL;
 	while (lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 09:32:25 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/16 12:12:52 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/10/23 10:50:10 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 
 	s_split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s || !s_split)
+	if (!s_split || !s)
 		return (NULL);
 	i = 0;
 	j = 0;
