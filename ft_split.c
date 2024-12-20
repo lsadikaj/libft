@@ -6,27 +6,42 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 09:32:25 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/10/23 10:50:10 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/12/20 15:45:33 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	toggle_quote_state(char c, int *quote)
+{
+	if (c == '\'' && *quote == 0)
+		*quote = 1;
+	else if (c == '\'' && *quote == 1)
+		*quote = 0;
+	else if (c == '"' && *quote == 0)
+		*quote = 2;
+	else if (c == '"' && *quote == 2)
+		*quote = 0;
+}
+
 static int	count_words(const char *str, char c)
 {
 	int	count;
 	int	in_word;
+	int	quote;
 
 	count = 0;
 	in_word = 0;
+	quote = 0;
 	while (*str)
 	{
+		toggle_quote_state(*str, &quote);
 		if (*str != c && in_word == 0)
 		{
 			in_word = 1;
 			count++;
 		}
-		else if (*str == c)
+		else if (*str == c && quote == 0)
 			in_word = 0;
 		str++;
 	}
@@ -38,43 +53,60 @@ static char	*word_dup(const char *str, int start, int end)
 	char	*word;
 	int		i;
 
-	i = 0;
 	word = malloc((end - start + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
+	i = 0;
+	if (str[start] == '\'' || str[start] == '"')
+		start++;
+	if (str[end - 1] == '\'' || str[end - 1] == '"')
+		end--;
 	while (start < end)
 		word[i++] = str[start++];
 	word[i] = '\0';
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static void	fill_split(char **s_split, const char *s, char c)
 {
-	int		index;
-	char	**s_split;
 	size_t	i;
 	size_t	j;
+	int		index;
+	int		quote;
 
-	s_split = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!s_split || !s)
-		return (NULL);
 	i = 0;
 	j = 0;
 	index = -1;
+	quote = 0;
 	while (i <= ft_strlen(s))
 	{
+		toggle_quote_state(s[i], &quote);
 		if (s[i] != c && index < 0)
 			index = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		else if ((s[i] == c && quote == 0) || i == ft_strlen(s))
 		{
-			s_split[j++] = word_dup(s, index, i);
+			if (index >= 0)
+				s_split[j++] = word_dup(s, index, i);
 			index = -1;
 		}
 		i++;
 	}
 	s_split[j] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**s_split;
+
+	if (!s)
+		return (NULL);
+	s_split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s_split)
+		return (NULL);
+	fill_split(s_split, s, c);
 	return (s_split);
 }
+
 /*
 #include <stdio.h>
 
