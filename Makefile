@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lsadikaj <lsadikaj@student.42lausanne.ch > +#+  +:+       +#+         #
+#    By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/01 14:48:22 by lsadikaj          #+#    #+#              #
-#    Updated: 2024/12/12 16:13:41 by lsadikaj         ###   ########.fr        #
+#    Updated: 2024/12/26 12:57:27 by lsadikaj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	  ft_putendl_fd.c ft_putnbr_fd.c \
 	  ft_printf/ft_printf.c ft_printf/ft_print_char.c ft_printf/ft_print_str.c \
 	  ft_printf/ft_print_nbr.c ft_printf/ft_print_unbr.c ft_printf/ft_print_ptr.c \
-	  ft_printf/ft_print_hex.c
+	  ft_printf/ft_print_hex.c \
+	  get_next_line/get_next_line.c get_next_line/get_next_line_bonus.c
 
 BONUS_SRC = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
@@ -32,7 +33,7 @@ OBJ = $(SRC:.c=.o)
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I ft_printf
+CFLAGS = -Wall -Wextra -Werror -I. -I ft_printf -I get_next_line
 
 all : $(NAME)
 

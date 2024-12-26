@@ -6,7 +6,7 @@
 /*   By: lsadikaj <lsadikaj@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 12:54:17 by lsadikaj          #+#    #+#             */
-/*   Updated: 2024/12/17 12:38:55 by lsadikaj         ###   ########.fr       */
+/*   Updated: 2024/12/26 12:04:03 by lsadikaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 int		ft_printf(const char *format, ...);
+
+char	*get_next_line(int fd);
 
 #endif
